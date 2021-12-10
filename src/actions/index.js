@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { isCompositeComponent } from 'react-dom/test-utils';
 
 export const FETCH_START = "FETCH_START"
 export const FETCH_SUCCESS = "FETCH_SUCCESS" 
@@ -23,6 +24,13 @@ export const setError = err => {
 }
 
 export const addSmurf = (newSmurf) => {
+    axios.post(`https://localhost:3333/smurfs`, newSmurf)
+      .then(resp => {
+          console.log('post:', resp);
+      })
+      .catch(resp => {
+          console.log('error:', resp)
+      })
     return({type: ADD_SMURF, payload: newSmurf})
 }
 
