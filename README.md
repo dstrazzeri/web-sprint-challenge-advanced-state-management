@@ -113,8 +113,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What problem does the context API help solve?
 
+- Passing data from one component to another is a common requirement in most component-based frontend frameworks. It usually takes the form of data being passed from a parent component to a child component, or even from a child component to a parent component. As a result, components may have data that they don't require yet must convey down the tree.
+
+This becomes inconvenient quickly, especially for props that are required by multiple components inside an application. The Context API tries to address this issue by providing a method for components to share data values like this without having to pass a prop through each level of the app tree.
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+-actions: actions are a simple JavaScript object that includes data. The store's only source of information is actions. Actions feature a type field that specifies the type of action to take, and the other fields provide data or information. 
+-reducers: actions only tell what to do, but not how to do so, that's where reducers come in! reducers are the pure functions that take the current state & action and return the new state while telling the store "how to do".
+-store: store is the object the holds the state of the application, think of it as where we store things! It is known as the 'single source of truth' within a redux application because the state of the application is stored inside it as a one object tree. One app = one tree.
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
 
+- redux-thunk is a middleware that allows you to call action-creators that return a function (thunk) that takes the store's dispatch method as an argument and then dispatches the synchronous action after the API or side effects have ended.
+
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+- This week I thoroughly enjoyed learning Context API, it is comparatively less complex than redux. There is no need to pass data to the children at each level as the consumer component instance can access all the data provided by the the Provider Component at any level. Writing and maintaining code is simple, and reuseable. I am sure there are cons, but overall, I enjoyed that project the most this week. 
