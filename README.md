@@ -15,9 +15,9 @@ You are not allowed to collaborate during the sprint challenge.
 In this challenge, you will build a Smurfs village database utilizing Redux as your state management system. Build this challenge from the ground up using what you have learned about state management.
 
 ## Project Setup
-* [ ] Run npm install to install your dependencies.
-* [ ] Run npm start to run your frontend and backend code automatically.
-* [ ] Note your backend code will run automatically when your run npm start. There is no need to separately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
+* [X] Run npm install to install your dependencies.
+* [X] Run npm start to run your frontend and backend code automatically.
+* [X] Note your backend code will run automatically when your run npm start. There is no need to separately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
 
 ## Project Instructions
 
